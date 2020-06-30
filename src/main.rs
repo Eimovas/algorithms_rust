@@ -1,12 +1,12 @@
-mod unique_chars;
+use crate::array_string::is_permutation::{is_permutation_array, is_permutation_sort, is_permutation_hash};
+
+mod array_string;
 mod fibonacci;
 
-use crate::unique_chars::{has_unique_chars, has_unique_chars_hash};
-
 fn main() {
-    let result = has_unique_chars_hash("new");
-    println!("{}", result);
+    let str1 = "jonas";
+    let str2 = "sanoj";
+    let result = is_permutation_hash(&str1, &str2);
 
-    let result = has_unique_chars_hash("not unique");
     println!("{}", result);
 }
