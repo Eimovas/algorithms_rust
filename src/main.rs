@@ -1,12 +1,12 @@
-use crate::array_string::is_permutation::{is_permutation_array, is_permutation_sort, is_permutation_hash};
+use crate::array_string::urification::urify;
 
 mod array_string;
 mod fibonacci;
 
 fn main() {
-    let str1 = "jonas";
-    let str2 = "sanoj";
-    let result = is_permutation_hash(&str1, &str2);
+    let mut str : Vec<char> =  "i am going for a walk                  ".chars().collect();
+    let result = urify(&mut str, 21);
 
-    println!("{}", result);
+    let print1 : String = result.iter().collect();
+    println!("{}", print1);
 }
