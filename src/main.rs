@@ -1,12 +1,11 @@
-use crate::array_string::urification::urify;
+use crate::array_string::palindrome_permutation::is_palindrome_permutation;
 
 mod array_string;
 mod fibonacci;
 
 fn main() {
-    let mut str : Vec<char> =  "i am going for a walk                  ".chars().collect();
-    let result = urify(&mut str, 21);
+    let input = String::from("atco cta");
+    let result = is_palindrome_permutation(input);
 
-    let print1 : String = result.iter().collect();
-    println!("{}", print1);
+    println!("{}", result);
 }
