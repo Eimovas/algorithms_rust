@@ -4,6 +4,7 @@
 use std::collections::HashSet;
 
 // assuming str is ASCII
+#[allow(dead_code)]
 pub fn has_unique_chars(str : String) -> bool {
     let mut arr = [false;128];
     for c in str.chars() {
@@ -20,6 +21,7 @@ pub fn has_unique_chars(str : String) -> bool {
     true
 }
 
+#[allow(dead_code)]
 pub fn has_unique_chars_hash(str : &str) -> bool {
     let mut set : HashSet<char> = HashSet::new();
     for c in str.chars() {

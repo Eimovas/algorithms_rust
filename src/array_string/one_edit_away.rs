@@ -1,5 +1,4 @@
-use std::num;
-
+#[allow(dead_code)]
 fn main() {
     // there are three types of edits that can be performed on string - insert char, remove char, replace char.
     // given two strings, write a function if they are one edit (or zero edits) away from each other.

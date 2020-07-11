@@ -1,5 +1,6 @@
 use std::fmt::Write;
 
+#[allow(dead_code)]
 pub fn encode(str : String) -> String {
     if str.len() == 0 {
         return str;

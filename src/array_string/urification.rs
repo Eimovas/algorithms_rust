@@ -1,6 +1,7 @@
 // 3- encode empty spaces in given string with %20. You may assume that string has sufficient space for this.
 // You are given a 'true' length of string (the length of actual text with spaces).
 
+#[allow(dead_code)]
 fn get_true_space_count(chars : &[char]) -> usize {
     let mut spaces = 0;
     for c in chars {
@@ -11,6 +12,7 @@ fn get_true_space_count(chars : &[char]) -> usize {
     spaces
 }
 
+#[allow(dead_code)]
 pub fn urify(chars : &mut Vec<char>, true_length : usize) -> &Vec<char> {
     let true_space_count = get_true_space_count(&chars[0..true_length]);
     let mut new_index= true_length - 1 + true_space_count * 2;

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn get_nth(n : u32) -> u64 {
     if n == 0 {
         return 0;

@@ -1,6 +1,7 @@
-use std::collections::{HashSet, HashMap};
+use std::collections::{HashMap};
 
 // assuming ASCII char set of strings
+#[allow(dead_code)]
 pub fn is_permutation_array(str1 : &str, str2 : &str) -> bool {
     if str1.len() != str2.len() {
         return false;
@@ -23,6 +24,7 @@ pub fn is_permutation_array(str1 : &str, str2 : &str) -> bool {
     return true;
 }
 
+#[allow(dead_code)]
 pub fn is_permutation_sort(str1 : &str, str2 : &str) -> bool {
     if str1.len() != str2.len() {
         return false;
@@ -37,6 +39,7 @@ pub fn is_permutation_sort(str1 : &str, str2 : &str) -> bool {
     sorted1 == sorted2
 }
 
+#[allow(dead_code)]
 pub fn is_permutation_hash(str1 : &str, str2 : &str) -> bool {
     if str1.len() != str2.len() {
         return false;
@@ -44,13 +47,13 @@ pub fn is_permutation_hash(str1 : &str, str2 : &str) -> bool {
 
     let mut hash_map1 : HashMap<char,i32> = HashMap::new();
     for c in str1.chars() {
-        let mut value = hash_map1.entry(c).or_insert(0);
+        let value = hash_map1.entry(c).or_insert(0);
         *value += 1;
     }
 
     let mut hash_map2 : HashMap<char,i32> = HashMap::new();
     for c in str2.chars() {
-        let mut value = hash_map2.entry(c).or_insert(0);
+        let value = hash_map2.entry(c).or_insert(0);
         *value += 1;
     }
 

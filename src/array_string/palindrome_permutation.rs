@@ -9,6 +9,7 @@
 
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 pub fn is_palindrome_permutation(str : String) -> bool {
     // get char counts
     // if counts are all even, its true
@@ -19,7 +20,7 @@ pub fn is_palindrome_permutation(str : String) -> bool {
     for char in str.chars() {
         let lower = char.to_ascii_lowercase();
         if lower.is_alphabetic() {
-            if let Some(value) = counts.get(&lower) {
+            if let Some(&value) = counts.get(&lower) {
                 counts.insert(lower, value + 1);
             }
             else {
