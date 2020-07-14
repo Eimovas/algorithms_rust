@@ -1,3 +1,4 @@
+pub mod string_rotation;
 pub mod zero_matrix;
 pub mod matrix_rotation;
 pub mod encoding;
