@@ -3,6 +3,7 @@ fn is_substring(str1 : String, str2 : String) -> bool {
     str2.contains(str1.as_str())
 }
 
+#[allow(dead_code)]
 pub fn is_rotation(str1 : String, str2 : String) -> bool {
     let str = format!("{}{}", str1, str1);
     is_substring(str2, str)

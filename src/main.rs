@@ -1,5 +1,6 @@
 use crate::array_string::palindrome_permutation::is_palindrome_permutation;
 
+mod linked_lists;
 mod array_string;
 mod fibonacci;
 
